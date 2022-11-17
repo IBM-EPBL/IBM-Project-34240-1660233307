@@ -8,7 +8,7 @@ userid=""
 conn = ibm_db.connect("DATABASE=bludb;HOSTNAME=21fecfd8-47b7-4937-840d-d791d0218660.bs2io90l08kqb1od8lcg.databases.appdomain.cloud;PORT=31864;SECURITY=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID=lvh24264;PWD=gZS5lI5g0AJ3CrRN",'','')
 
 app = Flask(__name__)
-app.secret_key = 'harsini'
+app.secret_key = 'ibm'
 
 @app.route('/')
 def index():
