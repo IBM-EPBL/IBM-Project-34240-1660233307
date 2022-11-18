@@ -1,0 +1,86 @@
+
+<aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+        <li class="nav-item">
+        <a class="nav-link " href="base">
+            <i class="bi bi-grid"></i>
+            <span>Dashboard</span>
+        </a>
+        </li>
+
+        <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#expenses-nav" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-wallet2"></i><span>Expenses</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="expenses-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <li>
+            <a href="manage-expense">
+                </i><span>Manage Expense</span>
+            </a>
+            </li>
+            <li>
+            <a href="view-history">
+                </i><span>View History</span>
+            </a>
+            </li>
+            <li>
+            <a href="add-expense">
+                </i><span>Add Expense</span>
+            </a>
+            </li>
+        </ul>
+        </li>
+
+        <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#savings-nav" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-coin"></i><span>Limiting Expenses</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="savings-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <li>
+            <a href="add-category">
+                </i><span>Set Limit</span>
+            </a>
+            </li>
+        </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#reminders-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-journal-text"></i><span>Report Analysis</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="reminders-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                <a href="report">
+                    </i><span>Report</span>
+                </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#profile-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-journal-text"></i><span>User Profile</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="profile-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                <a href="view-profile">
+                    </i><span>User Profile</span>
+                </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+ <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "e2a8d811-7216-467e-8773-5cbfec393af7", // The ID of this integration.
+        region: "eu-gb", // The region your integration is hosted in.
+        serviceInstanceID: "eeb0f9b2-ba26-4bce-ad4d-08b36df6bcf6", // The ID of your service instance.
+        onLoad: function(instance) { instance.render(); }
+      };
+      setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+      });
+    </script>
+</aside>
