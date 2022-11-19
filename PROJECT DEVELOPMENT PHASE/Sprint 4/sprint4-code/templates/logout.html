@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta content="" name="description" />
+        <meta content="" name="keywords" />
+    
+        
+        <link href="static/assets/img/favicon.ico" rel="icon" />
+        <link
+          href="static/assets/img/apple-touch-icon.png"
+          rel="apple-touch-icon"
+        />
+    
+        <link href="https://fonts.gstatic.com" rel="preconnect" />
+        <link
+          href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet"
+        />
+    
+      
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+          crossorigin="anonymous"
+        />
+        <link href="static\assets\css\style.css" rel="stylesheet" />
+        <link href="static\assets\css\slider.css" rel="stylesheet" />
+        <link
+          href="static\assets\css\bootstrap-icons\bootstrap-icons.css"
+          rel="stylesheet"
+        />
+    
+        <script
+          src="https://kit.fontawesome.com/3d4f965968.js"
+          crossorigin="anonymous"
+        ></script>
+    
+        <link href="static\assets\css\login.scss" rel="stylesheet" />
+        <link href="static\assets\css\loginhome.css" rel="stylesheet" />
+        <script src="static\assets\js\login.js"></script>
+    </head>
+    <body>
+        <main>
+            <section >
+
+            <h1 >Thank you!</h1>
+            <br><br/>
+            <h2> Expense Book</h2>
+            <p >See you soon keep us posted</p>
+                <a href="/"><button class="btn btn-primary" type="button" >Back to Login</button></a>
+            </section>
+           
+            <script>
+              window.watsonAssistantChatOptions = {
+                integrationID: "e2a8d811-7216-467e-8773-5cbfec393af7", // The ID of this integration.
+                region: "eu-gb", // The region your integration is hosted in.
+                serviceInstanceID: "eeb0f9b2-ba26-4bce-ad4d-08b36df6bcf6", // The ID of your service instance.
+                onLoad: function(instance) { instance.render(); }
+              };
+              setTimeout(function(){
+                const t=document.createElement('script');
+                t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+                document.head.appendChild(t);
+              });
+            </script>
+          </main>
+          
+          
+    </body>
+</html>
+
