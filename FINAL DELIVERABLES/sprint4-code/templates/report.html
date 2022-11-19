@@ -1,0 +1,54 @@
+{% extends 'head.html' %}
+
+{% block body %}
+    {% include 'header.html' %}
+    {% include 'navigation.html' %}
+    <!-- ======= Main ======= -->
+    <main id="main" class="main">
+        {% block main %}
+        
+        <section class="section">
+            <div class="row">  
+            <div class="category-charts">
+                {% for i in range(0,size) %}
+                  <div>
+                    <h5 class="card-title">{{categoryNames[i]}}</h5>
+                    <!-- Doughnut Chart -->
+                    <canvas   id="{{categoryNames[i]}}"
+                    style="max-height: 400px"></canvas>
+                    <script>
+                      document.addEventListener("DOMContentLoaded", () => {
+                        new Chart(document.querySelector("{{'#'+categoryNames[i]}}"), {
+                          type: 'line',
+                          data: {
+                            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July','August','September','October','November','December'],
+                            datasets: [{
+                              label: "{{categoryNames[i]  }}",
+                              data: JSON.parse("{{barChart[i]}}"),
+                              fill: false,
+                              borderColor: 'rgb(75, 192, 192)',
+                              tension: 0.1
+                            }]
+                          },
+                          options: {
+                            scales: {
+                              y: {
+                                beginAtZero: true
+                              }
+                            }
+                          }
+                        });
+                      });
+                    </script>
+                 </div>
+  
+                  {% endfor %}
+                </div>
+  
+                </div>
+                </section>
+        {% endblock %}
+    </main><!--End Main-->
+    {% include 'footer.html' %}
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+{% endblock %}

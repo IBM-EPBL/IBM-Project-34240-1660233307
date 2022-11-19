@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: personalexpensetracker
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: personalexpensetracker
+  template:
+    metadata:
+      labels:
+        app: personalexpensetracker
+
+    spec:
+      containers:
+        - name: personalexpensetracker-container
+          image:  jp.icr.io/harsinins/image2
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
+              protocol: TCP
